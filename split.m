@@ -1,10 +1,11 @@
 function [tmp,res] = split(poly,var)
 
-order0 = subs(poly,var,0);
-
+poly = expand(poly);
+order0 = subs(poly,var,sym(0));
 tmp = poly - order0;
 
-order1 = subs(expand(simplify(tmp/var)),var,0);
+% keyboard
+order1 = subs(simplify(expand(tmp/var)),var,sym(0));
 
 tmp = tmp - order1*var;
 

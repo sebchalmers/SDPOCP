@@ -14,7 +14,7 @@ for k = 2:maxDeg
     v2 = [v2;y^k];
 end
 v = [1;v1;v2];
-poly = v.'*ones(1+2*maxDeg,1+2*maxDeg)*v;
+poly = v.'*randn(1+2*maxDeg,1+2*maxDeg)*v;
 
 % poly = 1;
 % for k = 1:maxDeg

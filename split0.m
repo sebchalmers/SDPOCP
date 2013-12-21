@@ -1,6 +1,6 @@
 function [tmp,res] = split0(poly,var)
 
-order0 = subs(poly,var,0);
+order0 = subs(poly,var,sym(0));
 
 tmp = poly - order0;
 
